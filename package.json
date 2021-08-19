@@ -1,0 +1,37 @@
+{
+  "name": "submit-form",
+  "version": "1.0.0",
+  "description": "receives form data from the Bluesensor website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node ./src/index.js",
+    "debug": "DEBUG=bsf_api:* nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daysemaroto/submit-form.git"
+  },
+  "author": "Dayse Maroto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daysemaroto/submit-form/issues"
+  },
+  "homepage": "https://github.com/daysemaroto/submit-form#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "mjml": "^4.10.2",
+    "morgan": "^1.10.0",
+    "multiparty": "^4.2.2",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "winston": "^3.3.3"
+  }
+}
