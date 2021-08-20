@@ -26,15 +26,20 @@ router.get('/status', (req, res) => res.send('OK'));
 
 
 router.post('/send', (req, res) => {
-    let form = new multiparty.Form();
-    let data = {};
-    form.parse(req, async (err, fields) => {
-        console.log(fields);
-        Object.keys(fields).forEach(function (property) {
-            data[property] = fields[property].toString();
+    try {
+        let form = new multiparty.Form();
+        let data = {};
+        form.parse(req, async (err, fields) => {
+            console.log(fields);
+            Object.keys(fields).forEach(function (property) {
+                data[property] = fields[property].toString();
+            });
+            await MailService.notifyNewMessage({ data });
         });
-        await MailService.notifyNewMessage({ data });
-    });
+        res.send('OK');
+    } catch (error) {
+        debug(error);
+    }
 
 });
 

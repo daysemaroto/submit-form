@@ -19,8 +19,8 @@ exports.templateMessage = ({ data }) => {
               <p><b>Telefono:</b> ${data.phone}</p>
               <p><b>Mensaje:</b> ${data.message}</p>
               <p><b>Número de Hectáreas:</b> ${data.hectares}</p>
-              <p><b>Buscando:</b> ${data.flexCheckDefault1} ${data.flexCheckDefault2} ${data.flexCheckDefault3}</p>
-              <p><b>Tipo:</b> ${data.flexRadioDefault}</p>
+              <p><b>Buscando:</b> ${data.searching} </p>
+              <p><b>Tipo:</b> ${data.type}</p>
               <br/>
             </mj-text>
           </mj-column>
