@@ -4,6 +4,7 @@ const infoLog = require('debug')('bsf_api:info:index');
 const {
     port,
     env,
+    smtpAccount,
 } = require('./config/vars');
 const logger = require('./config/logger');
 const app = require('./config/express');
@@ -11,6 +12,8 @@ const smtpMail = require('./config/smtpMail');
 
 infoLog.log = console.log.bind(console);
 infoLog('  Init API server...');
+
+infoLog('user smtp:', port, env, smtpAccount.auth.user );
 
 smtpMail.createTransporter();
 
