@@ -1,7 +1,7 @@
 const mjml2html = require('mjml');
 
 exports.templateMessage = ({ data }) => {
-  console.log("data", data);
+  console.log('data', data);
   const htmlOutput = mjml2html(`
     <mjml>
       <mj-body>

@@ -22,7 +22,7 @@ const createTransporter = () => {
       debug(err);
     } else {
       info('transporter verified (Host: %s | User: %s)', smtpAccount.host, smtpAccount.auth.user);
-      console.log("Server is ready to take our messages");
+      console.log('Server is ready to take our messages');
     }
   });
 };
